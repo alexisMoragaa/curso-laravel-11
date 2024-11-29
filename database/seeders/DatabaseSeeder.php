@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
         ]);
 
-        Task::factory(2)->create();
+        Task::factory(8)->create();
     }
 }

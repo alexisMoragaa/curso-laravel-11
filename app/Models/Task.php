@@ -13,13 +13,14 @@ class Task extends Model
     use HasFactory;
     use SoftDeletes;    
 
-    protected $filable = [
+    protected $fillable = [
         'title',
-        'description'
+        'description',
+        'user_id',
     ];
 
     public function user():BelongsTo
     {
-        return $this->belongsTo(User::class, 'id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }
